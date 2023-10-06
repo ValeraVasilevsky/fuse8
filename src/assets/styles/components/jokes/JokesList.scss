@@ -1,0 +1,70 @@
+.jokes-list {
+  display: grid;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+@include desktop-lg {
+  .jokes-list {
+    grid-template-columns: $grid-laptop;
+    grid-auto-rows: minmax(150px, auto);
+    gap: 20px;
+
+    &__item {
+      grid-column: span 4;
+
+      &:nth-child(1),
+      &:nth-child(2) {
+        grid-column: span 6;
+        grid-row: span 2;
+      }
+    }
+  }
+}
+
+@include desktop {
+  .jokes-list {
+    grid-template-columns: $grid-laptop;
+    grid-auto-rows: minmax(150px, auto);
+
+    gap: 20px;
+
+    &__item {
+      grid-column: span 4;
+
+      &:nth-child(1),
+      &:nth-child(2) {
+        grid-column: span 6;
+        grid-row: span 2;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .jokes-list {
+    grid-template-columns: $grid-tablet;
+    grid-auto-rows: minmax(150px, auto);
+
+    gap: 16px;
+
+    &__item {
+      grid-column: span 4;
+    }
+  }
+}
+
+@include mobile {
+  .jokes-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    flex-wrap: wrap;
+    gap: 16px;
+
+    &__item {
+      width: 100%;
+    }
+  }
+}

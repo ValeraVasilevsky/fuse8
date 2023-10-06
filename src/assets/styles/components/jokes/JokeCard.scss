@@ -1,0 +1,119 @@
+.joke-card {
+  background-color: $white;
+  box-shadow: $shadow;
+  color: $primary;
+
+  cursor: pointer;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 30px;
+
+  font-weight: 400;
+
+  &__text {
+    hyphens: auto;
+    white-space: pre-wrap;
+  }
+
+  &__meta {
+    margin-top: auto;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-family: "Montserrat";
+  }
+
+  &__id,
+  &__date {
+    color: $secondary;
+  }
+}
+
+@include desktop-lg {
+  .joke-card {
+    padding: 40px 40px 25px;
+
+    &__text {
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    &__id,
+    &__date {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+}
+
+@include desktop {
+  .joke-card {
+    padding: 32px 32px 25px;
+
+    &__text {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    &__meta {
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    &__id,
+    &__date {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+}
+
+@include tablet {
+  .joke-card {
+    padding: 32px 32px 25px;
+
+    &__text {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    &__meta {
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    &__id,
+    &__date {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+}
+
+@include mobile {
+  .joke-card {
+    padding: 16px;
+
+    &__text {
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    &__meta {
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    &__id,
+    &__date {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+}

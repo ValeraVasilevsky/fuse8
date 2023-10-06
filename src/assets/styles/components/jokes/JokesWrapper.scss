@@ -1,0 +1,102 @@
+.jokes-wrapper {
+  display: grid;
+  justify-content: center;
+  align-items: flex-start;
+  grid-template-rows: min-content;
+
+  &__loader {
+    grid-column: 1 / -1;
+  }
+}
+
+@include desktop-lg {
+  .jokes-wrapper {
+    grid-template-columns: $grid-laptop;
+    padding-bottom: 64px;
+
+    &__search-input,
+    &__result {
+      grid-column: 5 / 9;
+    }
+
+    &__search-input {
+      margin-top: 128px;
+    }
+
+    &__loader,
+    &__list {
+      margin-top: 60px;
+    }
+
+    &__list {
+      grid-column: 2 / 12;
+    }
+  }
+}
+
+@include desktop {
+  .jokes-wrapper {
+    grid-template-columns: $grid-laptop;
+    padding-bottom: 64px;
+
+    &__search-input,
+    &__result {
+      grid-column: 5 / 9;
+    }
+
+    &__search-input {
+      grid-column: 5 / 9;
+      margin-top: 64px;
+    }
+
+    &__loader,
+    &__list {
+      margin-top: 32px;
+    }
+
+    &__list {
+      grid-column: 2 / 12;
+    }
+  }
+}
+
+@include tablet {
+  .jokes-wrapper {
+    grid-template-columns: $grid-tablet;
+    padding-bottom: 40px;
+
+    &__search-input,
+    &__result,
+    &__list {
+      grid-column: 2 / 8;
+    }
+
+    &__search-input {
+      margin-top: 48px;
+    }
+
+    &__loader,
+    &__list {
+      margin-top: 16px;
+    }
+  }
+}
+
+@include mobile {
+  .jokes-wrapper {
+    grid-template-columns: $grid-mobile;
+    padding: 16px;
+
+
+    &__search-input,
+    &__result,
+    &__list {
+      grid-column: 1 / -1;
+    }
+
+    &__loader,
+    &__list {
+      margin-top: 16px;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+.default-view {
+  display: grid;
+  justify-content: flex-start;
+  align-items: flex-start;
+  grid-template-rows: min-content;
+
+  &__component {
+    grid-column: 1 / -1;
+  }
+}
+
+@include desktop-lg {
+  .default-view {
+    grid-template-columns: $grid-laptop;
+  }
+}
+
+@include desktop {
+  .default-view {
+    grid-template-columns: $grid-laptop;
+  }
+}
+
+@include tablet {
+  .default-view {
+    grid-template-columns: $grid-tablet;
+  }
+}
+
+@include mobile {
+  .default-view {
+    grid-template-columns: $grid-mobile;
+  }
+}

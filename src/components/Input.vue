@@ -8,6 +8,7 @@
         type="text"
         :value="props.modelValue"
         :placeholder="props.placeholder"
+        autofocus
       />
     </div>
 
@@ -39,7 +40,7 @@ const onChange = (value: string) => {
   emits("update:modelValue", value);
 };
 
-onMounted(() => input.value && input.value.focus())
+onMounted(() => input.value && input.value.focus());
 </script>
 
 <style scoped lang="scss">
